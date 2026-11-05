@@ -1,0 +1,13 @@
+{
+  "microsoft": {
+    "clientId": "",
+    "redirect": "https://login.microsoftonline.com/common/oauth2/nativeclient"
+  },
+  "server": "play.icemine.hu",
+  "minecraft": "1.20.6",
+  "fabricLoader": "latest",
+  "mods": ["fabric-api", "sodium", "lithium", "ferrite-core", "immediatelyfast", "entityculling", "modmenu"],
+  "website": "https://icemine.hu",
+  "discord": "https://discord.gg/icemine",
+  "news": "https://icemine.hu/api/news"
+}

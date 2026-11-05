@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://mc-heads.net data:; connect-src https://api.mcsrvstat.us https://icemine.hu; style-src 'self'; script-src 'self'">
+  <title>IceMine Launcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="titlebar">
+    <div class="brand"><span class="ice">Ice</span><span class="mine">Mine</span> <small>Launcher</small></div>
+    <div class="window-buttons">
+      <button id="minimize" title="Kis méret">&#8211;</button>
+      <button id="close" class="danger" title="Bezárás">&#10005;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="left">
+      <div class="hero">
+        <div class="flake">&#10052;</div>
+        <h1><span class="ice">Ice</span><span class="mine">Mine</span></h1>
+        <p class="tagline">OneBlock &middot; Kingdoms &middot; Creative &middot; BedWars &middot; Duels &middot; ComboFly</p>
+        <div class="server-card">
+          <span class="dot" id="server-dot"></span>
+          <div>
+            <strong id="server-name">play.icemine.hu</strong>
+            <span id="server-status">Szerver állapot betöltése...</span>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <h2>Hírek</h2>
+        <div id="news-list">
+          <article>
+            <h3>Üdv az IceMine Launcherben!</h3>
+            <p>Jelentkezz be a Microsoft-fiókoddal, és egy kattintással már a szerveren is vagy. A launcher magától felrakja a Fabricot és a gyorsító modokat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="account" id="account">
+        <img id="avatar" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        <div class="account-text">
+          <span class="label">Fiók</span>
+          <strong id="account-name">Nem vagy bejelentkezve</strong>
+        </div>
+        <button id="logout" class="link hidden">Kilépés</button>
+      </div>
+
+      <button id="login" class="primary big">Bejelentkezés Microsofttal</button>
+      <button id="play" class="primary big play hidden">JÁTÉK</button>
+
+      <div class="progress hidden" id="progress">
+        <div class="bar"><div class="fill" id="progress-fill"></div></div>
+        <span id="progress-text">Készülődés...</span>
+      </div>
+      <p class="error hidden" id="error"></p>
+      <p class="note hidden" id="not-configured">A launcherben még nincs beállítva a Microsoft alkalmazás azonosító (config.json), ezért a bejelentkezés nem fog működni.</p>
+
+      <div class="links">
+        <button id="settings-open" class="ghost">&#9881; Beállítások</button>
+        <button id="folder" class="ghost">&#128193; Játék mappa</button>
+        <button id="website" class="ghost">&#127760; Weboldal</button>
+        <button id="discord" class="ghost">&#128172; Discord</button>
+      </div>
+      <p class="version" id="version"></p>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="settings">
+    <div class="panel">
+      <h2>Beállítások</h2>
+      <label>Memória a játéknak: <strong id="memory-value">4 GB</strong>
+        <input type="range" id="memory" min="2" max="16" step="1">
+      </label>
+      <label class="check"><input type="checkbox" id="close-on-start"> A launcher eltűnik, amíg játszol</label>
+      <label class="check"><input type="checkbox" id="fullscreen"> Teljes képernyő</label>
+      <details>
+        <summary>Napló</summary>
+        <pre id="log"></pre>
+      </details>
+      <div class="actions">
+        <button id="settings-close" class="primary">Kész</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="update">
+    Új launcher verzió érhető el. <button id="update-install" class="link">Újraindítás és frissítés</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
