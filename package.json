@@ -48,7 +48,8 @@
     "publish": {
       "provider": "github",
       "owner": "ingyen-200-koveto",
-      "repo": "launcher"
+      "repo": "launcher",
+      "releaseType": "release"
     }
   }
 }
