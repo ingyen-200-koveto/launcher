@@ -31,10 +31,10 @@ A Microsoft-belépéshez a launchernek kell egy saját alkalmazás azonosító (
 
 A GitHub magától elkészíti a Windows telepítőt (`IceMine Launcher Setup x.y.z.exe`):
 
-- **Kiadás:** írd át a `package.json`-ban a `version` értékét (pl. `1.0.1`), majd készíts egy taget
-  (`v1.0.1`). A GitHub lefordítja, és feltölti a **Releases** közé. A játékosok launchere innen frissül magától.
-- **Próba:** a GitHubon az **Actions** → **Windows build** → **Run workflow**. A kész telepítő a futás alján, az
-  **Artifacts** résznél tölthető le.
+- Minden feltöltés után a GitHub magától lefordítja, és feltölti a **Releases** közé.
+- **Új verzió:** írd át a `package.json`-ban a `version` értékét (pl. `1.0.1`). A játékosok launchere ebből tudja,
+  hogy frissítenie kell.
+- **Letöltés:** https://github.com/ingyen-200-koveto/launcher/releases/latest
 
 Saját gépen (Windows, Node.js 20): `npm install`, majd `npm start` (kipróbálás) vagy `npm run dist` (telepítő a
 `dist` mappába).
